@@ -130,7 +130,7 @@ class FFMPEGProcessAudioAdapter(AudioAdapter):
             raise SpleeterError(f'output directory does not exists: {directory}')
         get_logger().debug('Writing file %s', path)
         input_kwargs = {'ar': sample_rate, 'ac': data.shape[1]}
-        output_kwargs = {'ar': sample_rate, 'strict': '-2'}
+        output_kwargs = {'ac': 1, 'ar': sample_rate, 'strict': '-2'}
         if bitrate:
             output_kwargs['audio_bitrate'] = bitrate
         if codec is not None and codec != 'wav':
