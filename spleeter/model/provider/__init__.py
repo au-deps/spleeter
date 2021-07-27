@@ -28,7 +28,7 @@ class ModelProvider(ABC):
     file download is not available.
     """
 
-    DEFAULT_MODEL_PATH: str = environ.get("MODEL_PATH", "pretrained_models")
+    DEFAULT_MODEL_PATH: str = environ.get("MODEL_PATH", "assets/audio_upload_input_data/pretrained_models")
     MODEL_PROBE_PATH: str = ".probe"
 
     @abstractmethod
